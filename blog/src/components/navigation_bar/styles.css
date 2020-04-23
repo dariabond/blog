@@ -1,0 +1,12 @@
+.topnav {
+  overflow: hidden;
+  background-color: "#333";
+}
+
+.topnav a {
+  display: inline-block;
+  padding: 10px;
+  font-family: 'Lato';
+  font-size: 24px;
+  text-transform: uppercase;
+}
