@@ -1,12 +1,40 @@
-.topnav {
+.navContainer {
+
+}
+
+.navItems {
   overflow: hidden;
   background-color: "#333";
 }
 
-.topnav a {
-  display: inline-block;
+.navItems a {
+  display: block;
   padding: 10px;
   font-family: 'Lato';
-  font-size: 24px;
+  font-size: 16px;
   text-transform: uppercase;
+  text-decoration: none;
+  color: #282c34;
+}
+
+.navIcon {
+  display: block;
+}
+
+.icon {
+  width: 45px;
+}
+
+@media screen and (max-width: 700px) {
+  .navItemsOpen {
+    display: block;
+  }
+  .navItemsHidden {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .navItems a { display: inline-block; }
+  .navIcon { display: none; }
 }
