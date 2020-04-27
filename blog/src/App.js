@@ -1,18 +1,32 @@
 import React, {StrictMode} from 'react';
-import NavigationBar from './components/navigation_bar';
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+
+import Header from './components/Header';
+import NavigationBar from './components/NavigationBar';
+import Home from './pages/home';
+import About from './pages/about';
+import Recipes from './pages/recipes';
+
 import "./App.css";
 
 export default function App() {
   return(
     <StrictMode>
-      <div className="App">
-        <header className="App-header">
-          <h2>
-            Daria's cosy stories
-          </h2>
-        </header>
+      <Header/>
+      <Router>
         <NavigationBar/>
-      </div>
+        <Switch>
+          <Route exact path="/">
+            <Home/>
+          </Route>
+          <Route exact path="/about">
+            <About/>
+          </Route>
+          <Route exact path="/recipes">
+            <Recipes/>
+          </Route>
+        </Switch>
+      </Router>
     </StrictMode>
   )
 }
