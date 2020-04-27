@@ -7,6 +7,10 @@ import menuIcon from './menuIcon.svg';
 export default function NavigationBar() {
   const [isOpen, setIsOpen] = useState(false);
 
+  function onRouteSelected() {
+    setIsOpen(false);
+  }
+
   return (
     <div className="navContainer">
       <div className="navIcon">
@@ -17,11 +21,11 @@ export default function NavigationBar() {
         </a>
       </div>
       <div className={['navItems', isOpen?'navItemsOpen':'navItemsHidden'].join(' ')}>
-        <Link to="/">Home</Link>
-        <Link to="/about">About</Link>
-        <Link to="/recipes">Recipes</Link>
-        <Link to="/">Cosy home</Link>
-        <Link to="/">Contact</Link>
+        <Link to="/" onClick={onRouteSelected}>Home</Link>
+        <Link to="/about" onClick={onRouteSelected}>About</Link>
+        <Link to="/recipes" onClick={onRouteSelected}>Recipes</Link>
+        <Link to="/" onClick={onRouteSelected}>Cosy home</Link>
+        <Link to="/" onClick={onRouteSelected}>Contact</Link>
       </div>
     </div>
   )
