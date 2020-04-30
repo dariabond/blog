@@ -1,0 +1,18 @@
+.pageTitle {
+  margin-top: 28px;
+  margin-bottom: 34px;
+  text-align: center;
+  font-family: 'Lato';
+  text-transform: uppercase;
+  font-size: 16px;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+  opacity: 0.5;
+}

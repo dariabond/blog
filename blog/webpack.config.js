@@ -8,6 +8,9 @@ module.exports = {
     path: path.resolve(__dirname, 'build'),
     publicPath: '/',
   },
+  devServer: {
+    historyApiFallback: true
+  },
   module: {
     rules: [
       {
