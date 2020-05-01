@@ -4,7 +4,21 @@
 
 @font-face {
   font-family: 'Lato';
-  src: url('./Lato-Light.ttf') format('truetype');
+  src: url('./fonts/Lato-Light.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Lato-Regular';
+  src: url('./fonts/Lato-Regular.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Lato-Thin';
+  src: url('./fonts/Lato-Thin.ttf') format('truetype');
   font-weight: 600;
   font-style: normal;
 }
