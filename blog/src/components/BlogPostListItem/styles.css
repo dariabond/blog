@@ -3,6 +3,11 @@
   margin: auto;
 }
 
+.listItem a {
+  color: #282c34;
+  text-decoration: none;
+}
+
 .thumbnail {
   width:100%;
   height:100%;

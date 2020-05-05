@@ -7,6 +7,7 @@ import NavigationBar from './components/NavigationBar';
 import Home from './pages/home';
 import About from './pages/about';
 import Recipes from './pages/recipes';
+import BlogPost from './pages/post';
 
 export default function App() {
   return(
@@ -23,6 +24,9 @@ export default function App() {
           </Route>
           <Route exact path="/recipes">
             <Recipes/>
+          </Route>
+          <Route exact path="/recipes/:id">
+            <BlogPost/>
           </Route>
         </Switch>
       </Router>
