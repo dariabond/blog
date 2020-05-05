@@ -4,10 +4,10 @@ import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import Header from './components/Header';
 import NavigationBar from './components/NavigationBar';
 
-import Home from './pages/home';
-import About from './pages/about';
-import Recipes from './pages/recipes';
-import BlogPost from './pages/post';
+import Home from './pages/Home';
+import About from './pages/About';
+import Recipes from './pages/Recipes';
+import BlogPost from './pages/BlogPost';
 
 export default function App() {
   return(
