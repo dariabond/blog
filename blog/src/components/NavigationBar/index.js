@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import {Link} from 'react-router-dom';
 
-import './styles.css';
+import styles from './styles.css';
 import menuIcon from './menuIcon.svg';
 
 export default function NavigationBar() {
@@ -12,15 +12,15 @@ export default function NavigationBar() {
   }
 
   return (
-    <div className="navContainer">
-      <div className="navIcon">
+    <div className={styles.navContainer}>
+      <div className={styles.navIcon}>
         <a href="#" onClick={() => {
           setIsOpen(!isOpen);
         }}>
-          <img className="icon" src={menuIcon} alt="Menu icon"/>
+          <img className={styles.icon} src={menuIcon} alt="Menu icon"/>
         </a>
       </div>
-      <div className={['navItems', isOpen?'navItemsOpen':'navItemsHidden'].join(' ')}>
+      <div className={[styles.navItems, isOpen?styles.navItemsOpen:styles.navItemsHidden].join(' ')}>
         <Link to="/" onClick={onRouteSelected}>Home</Link>
         <Link to="/about" onClick={onRouteSelected}>About</Link>
         <Link to="/recipes" onClick={onRouteSelected}>Recipes</Link>

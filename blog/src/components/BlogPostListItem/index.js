@@ -1,16 +1,16 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 
-import './styles.css';
+import styles from './styles.css';
 
 export default function BlogPostListItem(props) {
   const {item} = props;
   return (
-    <div className="listItem" key={item.id}>
+    <div className={styles.listItem} key={item.id}>
       <Link to={`/recipes/${item.id}`}>
-        <p className="title">{item.title}</p>
-        <p className="date">{item.date}</p>
-        <img className="thumbnail" src={item.titleImageUrl}/>
+        <p className={styles.title}>{item.title}</p>
+        <p className={styles.date}>{item.date}</p>
+        <img className={styles.thumbnail} src={item.titleImageUrl}/>
       </Link>
     </div>
   )

@@ -2,7 +2,7 @@ import React from 'react';
 
 import BlogPostList from '../../components/BlogPostList';
 import PageTitle from '../../components/PageTitle';
-import './styles.css';
+import styles from './styles.css';
 
 export default function Recipes() {
   return (
