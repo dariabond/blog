@@ -23,7 +23,7 @@ export default function NavigationBar(props) {
         <Link to="/" onClick={onRouteSelected}>Home</Link>
         <Link to="/about" onClick={onRouteSelected}>About</Link>
         <Link to="/recipes" onClick={onRouteSelected}>Recipes</Link>
-        <Link to="/" onClick={onRouteSelected}>Cosy home</Link>
+        <Link to="/cosyhome" onClick={onRouteSelected}>Cosy home</Link>
         <Link to="/contact" onClick={onRouteSelected}>Contact</Link>
       </div>
     </div>

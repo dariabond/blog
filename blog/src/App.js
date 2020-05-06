@@ -9,6 +9,7 @@ import About from './pages/About';
 import Recipes from './pages/Recipes';
 import BlogPost from './pages/BlogPost';
 import Contact from './pages/Contact';
+import CosyHome from './pages/CosyHome';
 
 export default function App() {
   const [isOpen, setIsOpen] = useState(false);
@@ -32,6 +33,9 @@ export default function App() {
           </Route>
           <Route exact path="/contact">
             <Contact data={initialAppData.contact}/>
+          </Route>
+          <Route exact path="/cosyhome">
+            <CosyHome data={initialAppData.contact}/>
           </Route>
         </Switch>
       </Router>
