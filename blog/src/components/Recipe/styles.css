@@ -1,7 +1,7 @@
 .recipeContainer {
   background-color: #f0f0f0;
   color: #595756;
-  margin: 10px 30px 10px 30px;
+  margin: 10px 0 10px 0;
   padding: 20px 35px 20px 35px;
 }
 
@@ -47,10 +47,4 @@ hr {
 
 .sectionList {
   padding: 0 0 0 25px;
-}
-
-@media screen and (min-width: 700px) {
-  .recipeContainer {
-    width: 35%;
-  }
 }

@@ -1,12 +1,24 @@
 import React from 'react';
 
+import styles from './styles.css';
+
 import Recipe from '../../components/Recipe';
 
 export default function BlogPost(props) {
   const data = blogPost;
   return (
-    <div>
-      <p>{data.name}</p>
+    <div className={styles.container}>
+      <p className={styles.date}>{data.date}</p>
+      <p className={styles.title}>{data.name}</p>
+      <div>
+        {data.content.map(item => {
+          if (item.type == "image") {
+            return <img className={styles.photo} src={item.url}/>
+          } else if (item.type == "text") {
+            return <p className={styles.paragraph}>{item.content}</p>
+          }
+        })}
+      </div>
       <Recipe data={data.recipe} name={data.name}/>
     </div>
   )
@@ -14,6 +26,7 @@ export default function BlogPost(props) {
 
 const blogPost = {
   name: "Vegan salted caramel pudding",
+  date: "10 June 2020",
   recipe: {
     name: "Vegan salted caramel pudding",
     category: "Desserts",
@@ -48,12 +61,33 @@ const blogPost = {
   content: [
     {
       type: "image",
-      url: ""
+      url: 'https://i1.wp.com/www.wallflourgirl.com/wp-content/uploads/2018/04/Custard-Filled_Victoria_Sponge_Cake_042218_1.jpg'
     },
     {
       type: "text",
-      content: "Text content lorem ipsum"
-    }
+      content: "These Vegan Salted Caramel Puddings were inspired by my Vegan Salted Caramel Tart. They make a great option for when you don’t want to make a whole tart, but still want a creamy caramel dessert!"
+    },
+    {
+      type: "image",
+      url: 'https://thestayathomechef.com/wp-content/uploads/2018/02/Best-Brownies-1-small.jpg'
+    },
+    ,
+    {
+      type: "text",
+      content: "It’s really easy too. You make a caramel sauce then add 3 more ingredients to make it into a creamy dessert."
+    },
+    {
+      type: "image",
+      url: 'https://i1.wp.com/www.wallflourgirl.com/wp-content/uploads/2018/04/Custard-Filled_Victoria_Sponge_Cake_042218_1.jpg'
+    },
+    {
+      type: "text",
+      content: "1. After the custard is cooked, pour this into a heatproof bowl and tap the bottom to remove any air bubbles. Cover with cling wrap avoiding any air bubbles on top as best as you can. This is to prevent the skin from forming. Set aside until it has cooled slightly, then refrigerate for an hour. This sets it slightly. Give it a whisk until it’s smooth again. You can then add it to whatever you’d like to serve it in. When doing so you can create a pattern on top like the photos have. To me, this looks a little bit nicer, say if you’re serving it for an occasion but this is purely for presentation and not necessary! Then refrigerate for a further 2 hours."
+    },
+    {
+      type: "text",
+      content: "2. If you’re not too fussed, then this option is for you. After the custard is cooked, pour it directly into ramekins. Cover with cling wrap avoiding air bubbles as best as you can. Set aside until it has cooled slightly and refrigerate for 3 hours to set. I’ve used this option for the recipe card as it’s the easiest. The photos I have used are option 1."
+    },
   ],
   rating: 4.5
 }
