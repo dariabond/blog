@@ -1,7 +1,11 @@
 import React from 'react';
 
-export default function About() {
+import styles from './styles.css';
+
+export default function About(props) {
   return (
-    <p>This is about page</p>
+    <div className={styles.container}>
+      <p>{props.data}</p>
+    </div>
   )
 }

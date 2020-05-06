@@ -21,7 +21,7 @@ export default function App() {
             <Home/>
           </Route>
           <Route exact path="/about">
-            <About/>
+            <About data={initialAppData.about}/>
           </Route>
           <Route exact path="/recipes">
             <Recipes setMenuOpen={setIsOpen}/>
@@ -33,4 +33,11 @@ export default function App() {
       </Router>
     </StrictMode>
   )
+}
+
+const initialAppData = {
+  about: "Hi! My name is D. I am very happy to share my love to cosy home starting from the smell of the favourite homemade healthy dishes and continuing with making your place feel more like home.",
+  contact: {
+    email: "myemail@gmail.com"
+  }
 }
