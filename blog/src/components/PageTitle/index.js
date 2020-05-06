@@ -8,5 +8,5 @@ export default function PageTitle(props) {
       <hr/>
       <p className={styles.pageTitle}>{props.title}</p>
     </div>
-  )
+  );
 }

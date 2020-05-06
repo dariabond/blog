@@ -2,7 +2,7 @@ import React from 'react';
 
 import styles from './styles.css';
 
-export default function Recipe({data, name}) {
+export default function Recipe({ data, name }) {
   return (
     <div className={styles.recipeContainer}>
       <p className={styles.recipeHeader}>{name}</p>
@@ -24,15 +24,16 @@ export default function Recipe({data, name}) {
         <p className={styles.sectionTitle}>Ingredients</p>
         <ul className={[styles.textContent, styles.sectionList].join(' ')}>
           {data.ingredients.map(item => (
-            <li>{item}</li>
+            <li key={data.ingredients.indexOf(item)}>{item}</li>
           ))}
+          {}
         </ul>
       </div>
       <div className={[styles.section, styles.method].join(' ')}>
         <p className={styles.sectionTitle}>Method</p>
         <ol className={[styles.textContent, styles.sectionList].join(' ')}>
           {data.method.map(item => (
-            <li>{item}</li>
+            <li key={data.method.indexOf(item)}>{item}</li>
           ))}
         </ol>
       </div>
@@ -41,10 +42,10 @@ export default function Recipe({data, name}) {
         <p className={styles.sectionTitle}>Notes</p>
         <ul className={[styles.textContent, styles.sectionList].join(' ')}>
           {data.notes.map(item => (
-            <li>{item}</li>
+            <li key={data.notes.indexOf(item)}>{item}</li>
           ))}
         </ul>
       </div>
     </div>
-  )
+  );
 }

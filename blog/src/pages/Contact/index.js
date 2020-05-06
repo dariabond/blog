@@ -9,5 +9,5 @@ export default function Contact(props) {
       <PageTitle title="Contact"/>
       <p>{props.data.message}</p>
     </div>
-  )
+  );
 }

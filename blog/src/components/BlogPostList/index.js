@@ -7,8 +7,8 @@ export default function BlogPostList(props) {
   return (
     <div className={styles.container}>
       {props.items.map(item => (
-        <BlogPostListItem setMenuOpen={props.setMenuOpen} item={item}/>
+        <BlogPostListItem key={item.id} setMenuOpen={props.setMenuOpen} item={item}/>
       ))}
     </div>
-  )
+  );
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 import styles from './styles.css';
 import menuIcon from './menuIcon.svg';
@@ -27,5 +27,5 @@ export default function NavigationBar(props) {
         <Link to="/contact" onClick={onRouteSelected}>Contact</Link>
       </div>
     </div>
-  )
+  );
 }

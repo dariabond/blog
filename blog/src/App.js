@@ -1,5 +1,5 @@
-import React, {StrictMode, useState} from 'react';
-import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+import React, { StrictMode, useState } from 'react';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 import Header from './components/Header';
 import NavigationBar from './components/NavigationBar';
@@ -19,33 +19,34 @@ export default function App() {
       <Router>
         <NavigationBar setMenuOpen={setIsOpen} isOpen={isOpen}/>
         <Switch>
-          <Route exact path="/">
+          <Route exact path='/'>
             <Home/>
           </Route>
-          <Route exact path="/about">
+          <Route exact path='/about'>
             <About data={initialAppData.about}/>
           </Route>
-          <Route exact path="/recipes">
+          <Route exact path='/recipes'>
             <Recipes setMenuOpen={setIsOpen}/>
           </Route>
-          <Route exact path="/recipes/:id">
+          <Route exact path='/recipes/:id'>
             <BlogPost/>
           </Route>
-          <Route exact path="/contact">
+          <Route exact path='/contact'>
             <Contact data={initialAppData.contact}/>
           </Route>
-          <Route exact path="/cosyhome">
+          <Route exact path='/cosyhome'>
             <CosyHome data={initialAppData.contact}/>
           </Route>
         </Switch>
       </Router>
     </StrictMode>
-  )
+  );
 }
 
 const initialAppData = {
-  about: "Hi! My name is D. I am very happy to share my love to cosy home starting from the smell of the favourite homemade healthy dishes and continuing with making your place feel more like home.",
+  about: 'Hi! My name is D. I am very happy to share my love to cosy home starting from the'+
+  'smell of the favourite homemade healthy dishes and continuing with making your place feel more like home.',
   contact: {
-    message: "If you would like to contact me, I would love to hear from you at myemail@gmail.com"
+    message: 'If you would like to contact me, I would love to hear from you at myemail@gmail.com'
   }
-}
+};

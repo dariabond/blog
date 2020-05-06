@@ -1,10 +1,10 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 import styles from './styles.css';
 
 export default function BlogPostListItem(props) {
-  const {item} = props;
+  const { item } = props;
   return (
     <div className={styles.listItem} key={item.id}>
       <Link to={`/recipes/${item.id}`} onClick={() => props.setMenuOpen(false)}>
@@ -13,5 +13,5 @@ export default function BlogPostListItem(props) {
         <img className={styles.thumbnail} src={item.titleImageUrl}/>
       </Link>
     </div>
-  )
-};
+  );
+}

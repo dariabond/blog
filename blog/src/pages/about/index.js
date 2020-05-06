@@ -9,5 +9,5 @@ export default function About(props) {
       <PageTitle title="About"/>
       <p>{props.data}</p>
     </div>
-  )
+  );
 }
