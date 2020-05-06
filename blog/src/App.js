@@ -8,6 +8,7 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Recipes from './pages/Recipes';
 import BlogPost from './pages/BlogPost';
+import Contact from './pages/Contact';
 
 export default function App() {
   const [isOpen, setIsOpen] = useState(false);
@@ -29,6 +30,9 @@ export default function App() {
           <Route exact path="/recipes/:id">
             <BlogPost/>
           </Route>
+          <Route exact path="/contact">
+            <Contact data={initialAppData.contact}/>
+          </Route>
         </Switch>
       </Router>
     </StrictMode>
@@ -38,6 +42,6 @@ export default function App() {
 const initialAppData = {
   about: "Hi! My name is D. I am very happy to share my love to cosy home starting from the smell of the favourite homemade healthy dishes and continuing with making your place feel more like home.",
   contact: {
-    email: "myemail@gmail.com"
+    message: "If you would like to contact me, I would love to hear from you at myemail@gmail.com"
   }
 }
