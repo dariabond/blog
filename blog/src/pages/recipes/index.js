@@ -4,11 +4,11 @@ import BlogPostList from '../../components/BlogPostList';
 import PageTitle from '../../components/PageTitle';
 import styles from './styles.css';
 
-export default function Recipes() {
+export default function Recipes(props) {
   return (
     <div>
       <PageTitle title="Recipes"/>
-      <BlogPostList title="This is recipes page" items={items}/>
+      <BlogPostList title="This is recipes page" items={items} setMenuOpen={props.setMenuOpen}/>
     </div>
   )
 }

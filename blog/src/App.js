@@ -1,4 +1,4 @@
-import React, {StrictMode} from 'react';
+import React, {StrictMode, useState} from 'react';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 
 import Header from './components/Header';
@@ -10,11 +10,12 @@ import Recipes from './pages/Recipes';
 import BlogPost from './pages/BlogPost';
 
 export default function App() {
+  const [isOpen, setIsOpen] = useState(false);
   return(
     <StrictMode>
       <Header/>
       <Router>
-        <NavigationBar/>
+        <NavigationBar setMenuOpen={setIsOpen} isOpen={isOpen}/>
         <Switch>
           <Route exact path="/">
             <Home/>
@@ -23,7 +24,7 @@ export default function App() {
             <About/>
           </Route>
           <Route exact path="/recipes">
-            <Recipes/>
+            <Recipes setMenuOpen={setIsOpen}/>
           </Route>
           <Route exact path="/recipes/:id">
             <BlogPost/>
